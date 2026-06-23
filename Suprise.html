@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Kritika ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="petals"></div>
+<div id="hearts"></div>
+
+<header>
+
+<h1>🌸 For Kritika 🌸</h1>
+
+<p>
+A little surprise made with love ❤️
+</p>
+
+</header>
+
+<section class="hero">
+
+<div class="teddy">
+
+<img
+src="https://cdn.pixabay.com/photo/2017/01/31/13/14/teddy-bear-2026675_640.png"
+alt="Teddy Bear">
+
+</div>
+
+<h2>
+Every flower blooms...
+
+but my favourite one is you.
+🌹
+</h2>
+
+<button id="roseButton">
+
+🌹 Give Kritika a Rose
+
+</button>
+
+<div id="roseCounter">
+
+Roses Given : <span>0</span>
+
+</div>
+
+<div id="message"></div>
+
+</section>
+
+<section class="letters">
+
+<h2>💌 Secret Letters</h2>
+
+<div class="cards">
+
+<div class="letter">
+
+<button class="open">
+
+Letter 1
+
+</button>
+
+<div class="content">
+
+You make ordinary days feel beautiful.
+
+🌸❤️
+
+</div>
+
+</div>
+
+<div class="letter">
+
+<button class="open">
+
+Letter 2
+
+</button>
+
+<div class="content">
+
+Every smile of yours is worth more than a thousand roses.
+
+🌹
+
+</div>
+
+</div>
+
+<div class="letter">
+
+<button class="open">
+
+Letter 3
+
+</button>
+
+<div class="content">
+
+Thank you for simply being you.
+
+❤️
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="gift">
+
+<h2>🎁 One More Surprise</h2>
+
+<button id="giftButton">
+
+Open Gift
+
+</button>
+
+<div id="giftMessage">
+
+🧸❤️
+
+The teddy saved his biggest bouquet just for you.
+
+May your days always bloom like cherry blossoms.
+
+🌸🌹
+
+</div>
+
+</section>
+
+<section class="meter">
+
+<h2>
+
+❤️ Happiness Meter ❤️
+
+</h2>
+
+<div class="progress">
+
+<div id="fill"></div>
+
+</div>
+
+<button id="heartButton">
+
+Send Love ❤️
+
+</button>
+
+</section>
+
+<footer>
+
+Made especially for Kritika 🌸
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:linear-gradient(180deg,#fff8fb,#ffeef5,#fff);
+    color:#444;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#ff4d88;
+}
+
+header p{
+    margin-top:10px;
+    font-size:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:30px;
+}
+
+.hero h2{
+    margin:30px auto;
+    max-width:700px;
+    font-weight:400;
+}
+
+.teddy img{
+    width:280px;
+    animation:float 3s ease-in-out infinite;
+    filter:drop-shadow(0 15px 25px rgba(0,0,0,.2));
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:#ff4d88;
+    color:white;
+    font-size:18px;
+    transition:.3s;
+    margin-top:20px;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2d73;
+}
+
+#roseCounter{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:#ff4d88;
+}
+
+#message{
+    margin-top:20px;
+    font-size:20px;
+    color:#c2185b;
+    min-height:35px;
+}
+
+.letters{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    margin-top:40px;
+}
+
+.letter{
+    width:280px;
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.content{
+    display:none;
+    margin-top:20px;
+    line-height:1.7;
+}
+
+.gift{
+    text-align:center;
+    padding:70px 20px;
+}
+
+#giftMessage{
+    display:none;
+    margin-top:30px;
+    font-size:22px;
+    color:#d81b60;
+    animation:fadeIn 1s;
+}
+
+.meter{
+    text-align:center;
+    padding:60px;
+}
+
+.progress{
+    width:320px;
+    height:30px;
+    margin:25px auto;
+    border-radius:20px;
+    overflow:hidden;
+    background:#ffd6e5;
+}
+
+#fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(to right,#ff5c8a,#ff2d73);
+    transition:1s;
+}
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:#888;
+}
+
+/* Floating Teddy */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Fade */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+
+}
+/* ===========================
+   Falling Cherry Blossoms
+=========================== */
+
+#petals{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.petal{
+    position:absolute;
+    top:-60px;
+    width:18px;
+    height:18px;
+    background:#ffd4e5;
+    border-radius:70% 30% 70% 30%;
+    opacity:.8;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+}
+
+100%{
+transform:translateY(120vh) translateX(120px) rotate(720deg);
+}
+
+}
+
+/* ===========================
+   Floating Hearts
+=========================== */
+
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d88;
+    font-size:24px;
+    animation:heartUp 4s linear forwards;
+}
+
+@keyframes heartUp{
+
+0%{
+opacity:1;
+transform:translateY(0) scale(.5);
+}
+
+100%{
+opacity:0;
+transform:translateY(-220px) scale(1.6);
+}
+
+}
+
+/* ===========================
+   Sparkle Effect
+=========================== */
+
+.sparkle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    box-shadow:
+    0 0 12px white,
+    0 0 18px pink;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.3;
+transform:scale(.5);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+}
+
+/* ===========================
+   Card Hover
+=========================== */
+
+.letter{
+    transition:.4s;
+}
+
+.letter:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+}
+
+/* ===========================
+   Romantic Glow
+=========================== */
+
+button{
+
+box-shadow:
+0 8px 20px rgba(255,80,120,.35);
+
+}
+
+button:hover{
+
+box-shadow:
+0 12px 30px rgba(255,60,120,.5);
+
+}
+
+/* ===========================
+   Teddy Image Glow
+=========================== */
+
+.teddy img:hover{
+
+transform:scale(1.05);
+
+transition:.4s;
+
+filter:
+drop-shadow(0 0 25px pink);
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:48px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.teddy img{
+
+width:220px;
+
+}
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.progress{
+
+width:90%;
+
+}
+
+button{
+
+width:90%;
+
+font-size:18px;
+
+}
+
+}
+
+/* ===========================
+   Footer Glow
+=========================== */
+
+footer{
+
+background:rgba(255,255,255,.4);
+
+backdrop-filter:blur(8px);
+
+margin-top:50px;
+
+}
+
+/* ===========================
+   Smooth Scroll
+=========================== */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+// ==========================
+// 🌹 Rose Counter
+// ==========================
+
+let roses = 0;
+
+const roseButton = document.getElementById("roseButton");
+const counter = document.querySelector("#roseCounter span");
+const message = document.getElementById("message");
+
+const messages = [
+"🌹 A rose just for you, Kritika.",
+"❤️ You make every day brighter.",
+"🌸 If smiles were flowers, yours would fill a garden.",
+"🧸 Teddy is smiling because of you.",
+"✨ You're the sweetest part of my world.",
+"💖 Another rose for someone truly special.",
+"🌺 Cherry blossoms are beautiful, but so are you."
+];
+
+roseButton.addEventListener("click", () => {
+
+    roses++;
+
+    counter.textContent = roses;
+
+    message.textContent =
+    messages[Math.floor(Math.random()*messages.length)];
+
+    createHeart(
+        window.innerWidth/2,
+        window.innerHeight/2
+    );
+
+});
+
+// ==========================
+// 💌 Letters
+// ==========================
+
+document.querySelectorAll(".open").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const content=
+button.nextElementSibling;
+
+if(content.style.display==="block"){
+
+content.style.display="none";
+button.textContent="Open Letter";
+
+}else{
+
+content.style.display="block";
+button.textContent="Close Letter";
+
+}
+
+});
+
+});
+
+// ==========================
+// 🎁 Gift
+// ==========================
+
+const giftButton=document.getElementById("giftButton");
+
+const giftMessage=document.getElementById("giftMessage");
+
+giftButton.addEventListener("click",()=>{
+
+giftMessage.style.display="block";
+
+for(let i=0;i<40;i++){
+
+createHeart(
+
+Math.random()*window.innerWidth,
+
+Math.random()*window.innerHeight
+
+);
+
+}
+
+});
+
+// ==========================
+// ❤️ Happiness Meter
+// ==========================
+
+let happiness=0;
+
+const fill=document.getElementById("fill");
+
+const heartButton=document.getElementById("heartButton");
+
+heartButton.addEventListener("click",()=>{
+
+if(happiness>=100)return;
+
+happiness+=10;
+
+fill.style.width=happiness+"%";
+
+createHeart(
+
+window.innerWidth/2,
+
+window.innerHeight/2
+
+);
+
+if(happiness===100){
+
+setTimeout(()=>{
+
+alert("💖 Kritika, you deserve all the happiness in the world. 🌸❤️");
+
+},500);
+
+}
+
+});
+
+// ==========================
+// ❤️ Floating Hearts
+// ==========================
+
+function createHeart(x,y){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=x+"px";
+
+heart.style.top=y+"px";
+
+document.getElementById("hearts")
+.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},4000);
+
+}
+  // ==========================
+// 🌸 Falling Cherry Blossoms
+// ==========================
+
+const petals = document.getElementById("petals");
+
+function createPetal(){
+
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+
+    petal.style.left = Math.random() * window.innerWidth + "px";
+
+    petal.style.animationDuration = (6 + Math.random() * 5) + "s";
+
+    petal.style.opacity = Math.random();
+
+    petal.style.transform =
+        "scale(" + (0.6 + Math.random()) + ")";
+
+    petals.appendChild(petal);
+
+    setTimeout(()=>{
+        petal.remove();
+    },12000);
+
+}
+
+setInterval(createPetal,250);
+
+
+// ==========================
+// ✨ Sparkles
+// ==========================
+
+function createSparkle(){
+
+    const sparkle = document.createElement("div");
+
+    sparkle.className = "sparkle";
+
+    sparkle.style.left =
+        Math.random()*window.innerWidth+"px";
+
+    sparkle.style.top =
+        Math.random()*window.innerHeight+"px";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(()=>{
+        sparkle.remove();
+    },2000);
+
+}
+
+setInterval(createSparkle,600);
+
+
+// ==========================
+// 🧸 Teddy Click Animation
+// ==========================
+
+const teddy = document.querySelector(".teddy img");
+
+teddy.addEventListener("click",()=>{
+
+    teddy.style.transform="scale(1.15) rotate(-6deg)";
+
+    createHeart(
+        teddy.getBoundingClientRect().left+120,
+        teddy.getBoundingClientRect().top+80
+    );
+
+    setTimeout(()=>{
+        teddy.style.transform="";
+    },400);
+
+});
+
+
+// ==========================
+// 🎊 Confetti Celebration
+// ==========================
+
+function celebration(){
+
+    for(let i=0;i<120;i++){
+
+        setTimeout(()=>{
+
+            createHeart(
+
+                Math.random()*window.innerWidth,
+
+                Math.random()*window.innerHeight
+
+            );
+
+        },i*20);
+
+    }
+
+}
+
+heartButton.addEventListener("click",()=>{
+
+    if(happiness===100){
+
+        celebration();
+
+    }
+
+});
+
+
+// ==========================
+// 🌙 Final Romantic Surprise
+// ==========================
+
+setTimeout(()=>{
+
+const ending=document.createElement("div");
+
+ending.style.position="fixed";
+ending.style.inset="0";
+ending.style.background=
+"linear-gradient(#0f172a,#1e293b,#000)";
+ending.style.color="white";
+ending.style.display="flex";
+ending.style.flexDirection="column";
+ending.style.justifyContent="center";
+ending.style.alignItems="center";
+ending.style.textAlign="center";
+ending.style.padding="30px";
+ending.style.opacity="0";
+ending.style.transition="1.5s";
+ending.style.zIndex="999";
+
+ending.innerHTML=`
+
+<h1 style="font-family:'Great Vibes';font-size:60px;">
+🌹
+</h1>
+
+<h2>
+Kritika ❤️
+</h2>
+
+<p style="max-width:700px;font-size:22px;line-height:1.8;margin-top:20px;">
+
+Every cherry blossom blooms for only a short time,
+
+but my admiration for you grows every single day.
+
+Thank you for making life feel a little more beautiful.
+
+🌸❤️
+
+</p>
+
+<button id="closeEnding"
+style="
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
+">
+
+Continue 🌸
+
+</button>
+
+`;
+
+document.body.appendChild(ending);
+
+setTimeout(()=>{
+ending.style.opacity="1";
+},100);
+
+document
+.getElementById("closeEnding")
+.addEventListener("click",()=>{
+
+ending.remove();
+
+});
+
+},90000);
+
+
+// ==========================
+// ❤️ Cursor Hearts
+// ==========================
+
+document.addEventListener("click",(e)=>{
+
+    createHeart(e.clientX,e.clientY);
+
+});
+      
+}
