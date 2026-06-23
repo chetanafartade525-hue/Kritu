@@ -1,0 +1,164 @@
+index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kritika ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4b91,#ff85a2,#ffc3d6);
+}
+
+.container{
+    text-align:center;
+    color:white;
+    z-index:2;
+    padding:30px;
+}
+
+h1{
+    font-size:4rem;
+    text-shadow:0 0 15px white;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px white; }
+    to{ text-shadow:0 0 30px white,0 0 50px #ff0066; }
+}
+
+.message{
+    margin-top:20px;
+    font-size:1.3rem;
+    max-width:700px;
+    line-height:1.8;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    font-size:1.1rem;
+    cursor:pointer;
+    margin:10px;
+    transition:.3s;
+}
+
+.yes{
+    background:white;
+    color:#ff0066;
+    font-weight:bold;
+}
+
+.yes:hover{
+    transform:scale(1.1);
+}
+
+.no{
+    background:#ff0066;
+    color:white;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:float 8s linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) scale(0);
+    }
+    100%{
+        transform:translateY(-100px) scale(1.5);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Kritika ❤️</h1>
+
+    <div class="message">
+        Dear Kritika,<br><br>
+
+        You make ordinary moments feel special.
+        Your smile brightens my day and your presence
+        always brings positivity into my life.
+        <br><br>
+
+        I wanted to tell you something from my heart...
+        <br><br>
+
+        <strong>Will you give me a chance to know you better? 🌹</strong>
+    </div>
+
+    <div class="buttons">
+        <button class="yes" onclick="accepted()">Yes ❤️</button>
+        <button class="no" id="noBtn">Maybe 🤭</button>
+    </div>
+</div>
+
+<script>
+function accepted(){
+    document.body.innerHTML = `
+    <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#ff4b91,#ff85a2);
+    color:white;
+    text-align:center;
+    font-family:Segoe UI;">
+        <div>
+            <h1 style="font-size:4rem;">❤️ Thank You Kritika ❤️</h1>
+            <p style="font-size:1.5rem;margin-top:20px;">
+                You just made my day beautiful! 🌹
+            </p>
+        </div>
+    </div>`;
+}
+
+const noBtn=document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover",()=>{
+    noBtn.style.position="absolute";
+    noBtn.style.left=Math.random()*80+"vw";
+    noBtn.style.top=Math.random()*80+"vh";
+});
+
+for(let i=0;i<40;i++){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*25+15)+"px";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
